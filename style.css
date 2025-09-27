@@ -1,0 +1,112 @@
+    /* Reset & base */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    /* Page wrapper centers the whole resume; sections inside are left-aligned */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;     /* center the column on large screens */
+      padding: 18px 16px; /* page padding */
+    }
+
+
+    /* Head */
+    .top-container {
+      margin-top: 10px;
+      padding: 10px;
+      text-align: center; /* header content remains centered */
+    }
+
+    /* Main Name */
+    .heading {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      border: none; /* no underline for main name */
+    }
+
+    .contact {
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .links {
+      display: inline-flex;
+      gap: 18px;
+      margin-top: 6px;
+      font-size: 14px;
+      align-items: center;
+    }
+
+
+    /* Sections: left-aligned inside the centered .page */
+    section {
+      margin: 20px 0;
+      padding: 0 6px;
+      text-align: left;
+    }
+
+        /* Section Titles */
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: #222;
+      border-bottom: 2px solid #333; /* darker underline */
+      padding-bottom: 4px;
+    }
+
+    .data { font-size: 14px; }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; line-height: 1.45; }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .page { padding: 12px; }
+      .heading { font-size: 20px; }
+      .section-title { font-size: 16px; }
+      .data { font-size: 13px; }
+      .links { gap: 12px; align-items: flex-start; }
+    }
+
+#download-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+#download-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+#download-btn:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  transform: scale(0.95); /* Slight shrink effect */
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  margin: 20px 0;
+  font-style: italic;
+}
+
