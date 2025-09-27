@@ -1,4 +1,4 @@
-ResumeEase
+ResumeEase - https://resume-ease-ruddy.vercel.app/
 
 ResumeEase is an interactive, editable, and downloadable resume template specifically designed for engineering freshers. It allows users to easily edit their personal information, projects, skills, and achievements directly on the webpage and download the final resume as a PDF. 
 
