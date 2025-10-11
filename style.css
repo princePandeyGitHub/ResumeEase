@@ -8,6 +8,7 @@ html, body {
   color: #111;
   background: #fff;
   transition: background 0.4s, color 0.4s;
+  scroll-behavior: none;
 }
 
 /* Page */
@@ -70,7 +71,7 @@ li { margin-bottom: 8px; line-height: 1.45; }
 }
 
 /* Download button */
-#download-btn {
+#download-btn, #mode-btn {
   display: block;
   margin: 20px auto;
   background-color: #4CAF50;
@@ -82,13 +83,19 @@ li { margin-bottom: 8px; line-height: 1.45; }
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-#download-btn:hover {
+#download-btn:hover, #mode-btn:hover {
   background-color: #45a049;
   transform: scale(1.05);
 }
-#download-btn:active {
+#download-btn:active, #mode-btn:active {
   background-color: #3e8e41;
   transform: scale(0.95);
+}
+
+#mode-btn, #mode-btn:hover {
+  background: none;
+  padding: 0;
+  font-size: 30px;
 }
 
 /* Footer */
@@ -98,45 +105,4 @@ li { margin-bottom: 8px; line-height: 1.45; }
   color: #555;
   margin: 20px 0;
   font-style: italic;
-}
-
-/* 🌗 Dark mode styles */
-body.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
-}
-body.dark-mode .page {
-  background: #1e1e1e;
-  color: #e0e0e0;
-  border: 1px solid #333;
-}
-body.dark-mode .section-title {
-  color: #90caf9;
-  border-bottom-color: #90caf9;
-}
-body.dark-mode .footer {
-  color: #aaa;
-}
-
-/* Toggle button */
-#mode-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #f0f0f0;
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, background 0.3s;
-}
-#mode-btn:hover {
-  transform: scale(1.1);
-}
-body.dark-mode #mode-btn {
-  background: #222;
-  color: #fff;
 }

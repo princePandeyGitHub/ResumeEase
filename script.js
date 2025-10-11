@@ -1,9 +1,12 @@
 const downloadBtn = document.getElementById('download-btn');
 const page = document.querySelector('.page');
+const topContainer = document.getElementById('top-container');
+const modeBtn = document.getElementById('mode-btn');
 
 // PDF Download
 function downloadResume() {
-  downloadBtn.style.display = 'none';
+  applyLightMode(); // resume should be downloaded in Light mode
+  topContainer.style.display = 'none'; //top-container should be removed
   const element = document.querySelector(".page");
   const opt = {
     margin: 0.5,
@@ -14,7 +17,7 @@ function downloadResume() {
   };
 
   html2pdf().set(opt).from(element).save().then(() => {
-    downloadBtn.style.display = 'block';
+    topContainer.style.display = 'flex';
   });
 }
 downloadBtn.addEventListener('click', downloadResume);
@@ -23,10 +26,6 @@ downloadBtn.addEventListener('click', downloadResume);
 window.addEventListener('load', () => {
   const savedResume = localStorage.getItem('resumeContent');
   if (savedResume) page.innerHTML = savedResume;
-
-  // Load dark mode preference
-  const savedMode = localStorage.getItem('darkMode');
-  if (savedMode === 'true') document.body.classList.add('dark-mode');
 });
 
 // Auto-save changes
@@ -34,15 +33,45 @@ page.addEventListener('input', () => {
   localStorage.setItem('resumeContent', page.innerHTML);
 });
 
-// 🌗 Dark/Light Mode Toggle
-const modeBtn = document.createElement('button');
-modeBtn.id = 'mode-btn';
-modeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-document.body.appendChild(modeBtn);
 
-modeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('darkMode', isDark);
-  modeBtn.textContent = isDark ? '☀️' : '🌙';
-});
+//Dark mode functionality
+let isDark = false;
+
+function applyDarkMode() {
+  //dark mode styles
+  document.body.style.background = '#333';
+  document.body.style.color = 'white';
+  document.querySelectorAll('.section-title').forEach(section => {
+    section.style.color = 'white';
+  })
+  downloadBtn.style.background = '#FF9100'
+  downloadBtn.style.color = 'black'
+  modeBtn.innerText = '🌙';
+  document.querySelector('.footer').style.color = 'white';
+}
+
+function applyLightMode() {
+  //light mode styles
+  document.body.style.background = 'white';
+  document.body.style.color = 'black';
+  document.querySelectorAll('.section-title').forEach(section => {
+    section.style.color = 'black';
+  })
+  downloadBtn.style.background = '#4CAF50'
+  downloadBtn.style.color = 'white'
+  modeBtn.innerText = '☀️';
+  document.querySelector('.footer').style.color = 'black';
+}
+
+modeBtn.addEventListener('click',()=>{
+  if(isDark){
+    isDark = false;
+    applyLightMode();
+  }
+  else{
+    isDark = true;
+    applyDarkMode();
+  }
+})
+
+
