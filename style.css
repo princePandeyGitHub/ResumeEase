@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   width: 100%;
   font-family: 'Times New Roman', Times, serif;
-  line-height: 1.6;
+  line-height: 1.25;
   color: #111;
   background: #fff;
   transition: background 0.4s, color 0.4s;
@@ -20,8 +20,8 @@ html, body {
 
 /* Header */
 .top-container {
-  margin-top: 10px;
-  padding: 10px;
+  /* margin-top: 10px; */
+  /* padding: 10px; */
   text-align: center;
 }
 .heading {
@@ -59,7 +59,7 @@ section {
 }
 .data { font-size: 14px; }
 ul { padding-left: 20px; }
-li { margin-bottom: 8px; line-height: 1.45; }
+li { margin-bottom: 8px; line-height: 1.25; }
 
 /* Responsive */
 @media (max-width: 700px) {
@@ -105,4 +105,65 @@ li { margin-bottom: 8px; line-height: 1.45; }
   color: #555;
   margin: 20px 0;
   font-style: italic;
+}
+
+/* Floating hamburger button */
+#menu-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Overlay background */
+#menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 9;
+}
+
+/* Bottom sheet menu */
+#menu-panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  transition: bottom 0.3s ease;
+  z-index: 10;
+}
+
+#menu-panel.active {
+  bottom: 0;
+}
+
+#menu-overlay.active {
+  display: block;
+}
+
+#menu-panel h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #007bff;
+}
+
+#menu-panel label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
 }

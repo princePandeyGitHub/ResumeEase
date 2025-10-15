@@ -25,7 +25,7 @@
       </div>
     </header>
 
-    <section class="profile-container">
+    <section id="profile-container">
       <div class="section-title">Profile</div>
       <div class="data">
         Motivated and detail-oriented Computer Science undergraduate (Data Science specialization)
@@ -35,7 +35,7 @@
       </div>
     </section>
 
-    <section class="education-container">
+    <section id="education-container">
       <div class="section-title">Education</div>
       <div class="data">
         Bachelor of Technology (B.Tech) – Computer Science and Engineering (Data Science)<br>
@@ -44,16 +44,31 @@
       </div>
     </section>
 
-    <section class="project-container">
-      <div class="section-title">Projects</div>
-      <ul class="data">
-        <li><b>AI-Based Road Safety System</b> – Team project focused on accident prevention. Built predictive models to enhance driver safety. <i>Tools: Python, OpenCV, scikit-learn</i></li>
-        <li><b>Resume Builder Website</b> – Responsive platform for resume creation with real-time preview and form handling. <i>Tools: HTML, CSS, JavaScript (React planned)</i></li>
-        <li><b>AI Health Assistant</b> – AI chatbot for basic medical suggestions. Integrated simple NLP with medical datasets. <i>Tools: Python, Tkinter, SQLite</i></li>
-      </ul>
+    <section id="experience-container">
+      <div class="section-title">Experience</div>
+      <div class="data">
+        Data Analyst Trainee | American Indian Foundation | 4 Months <br>
+        Month Year – Month Year <br>
+        <ul>
+          <li>Gained hands-on experience in data analysis using Python, SQL, Excel, and Power BI.</li>
+          <li>Developed proficiency in data cleaning, data visualization, and report generation.</li>
+          <li>Applied analytical skills to interpret datasets and derive actionable insights.</li>
+          <li>Enhanced communication, problem-solving, and teamwork skills through collaborative projects.</li>
+        </ul>
+      </div>
+      <div class="data">
+        Data Analyst Trainee | American Indian Foundation | 4 Months <br>
+        Month Year – Month Year <br>
+        <ul>
+          <li>Gained hands-on experience in data analysis using Python, SQL, Excel, and Power BI.</li>
+          <li>Developed proficiency in data cleaning, data visualization, and report generation.</li>
+          <li>Applied analytical skills to interpret datasets and derive actionable insights.</li>
+          <li>Enhanced communication, problem-solving, and teamwork skills through collaborative projects.</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="skills-container">
+    <section id="skills-container">
       <div class="section-title">Skills</div>
       <ul class="data">
         <li><b>Programming Languages:</b> Python, C++, SQL, Web Technologies</li>
@@ -62,7 +77,26 @@
       </ul>
     </section>
 
-    <section class="achievements-container">
+    <section id="project-container">
+      <div class="section-title">Projects</div>
+      <ul class="data">
+        <li><b>AI-Based Road Safety System</b> – Team project focused on accident prevention. Built predictive models to enhance driver safety. <i>Tools: Python, OpenCV, scikit-learn</i></li>
+        <li><b>Resume Builder Website</b> – Responsive platform for resume creation with real-time preview and form handling. <i>Tools: HTML, CSS, JavaScript (React planned)</i></li>
+        <li><b>AI Health Assistant</b> – AI chatbot for basic medical suggestions. Integrated simple NLP with medical datasets. <i>Tools: Python, Tkinter, SQLite</i></li>
+      </ul>
+    </section>
+
+    <section id="certificates-container">
+      <div class="section-title">Certifications</div>
+      <ul class="data">
+        <li>Google Data Analytics Professional Certificate – Coursera | 2025</li>
+        <li>Microsoft Power BI Data Analyst Associate (PL-300) – Microsoft | 2025</li>
+        <li>SQL for Data Analysis – Udemy | 2024</li>
+        <li>Python for Data Science – Kaggle | 2024</li>
+      </ul>
+    </section>
+
+    <section id="achievements-container">
       <div class="section-title">Achievements</div>
       <ul class="data">
         <li>Won CodeXChallenge Hackathon at College Campus</li>
@@ -70,6 +104,44 @@
         <li>Presented AI Project at University TechFest</li>
       </ul>
     </section>
+
+    <section id="languages-container">
+      <div class="section-title">Languages</div>
+      <ul class="data">
+        <li>English</li>
+        <li>Hindi</li>
+        <li>French</li>
+        <li>Spanish</li>
+      </ul>
+    </section>
+
+    <section id="additional-container">
+      <div class="section-title">Additional Information</div>
+      <ul class="data">
+        <li>Member of [College/Community Name] Data Science Club (if applicable).</li>
+        <li>Qualified for SIH 2025 from internal college rounds.</li>
+        <li>Open to relocation and flexible with work environments.</li>
+        <li>Actively participate in online data challenges and hackathons.</li>
+      </ul>
+    </section>
+  </div>
+
+    <!-- Floating hamburger -->
+  <button id="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <!-- Bottom sheet menu -->
+  <div id="menu-overlay" onclick="toggleMenu()"></div>
+  <div id="menu-panel">
+    <h3>Manage Sections</h3>
+    <label><input type="checkbox" checked onchange="toggleSection('profile-container')">Profile</label>
+    <label><input type="checkbox" checked onchange="toggleSection('education-container')">Education</label>
+    <label><input type="checkbox" checked onchange="toggleSection('experience-container')">Experience</label>
+    <label><input type="checkbox" checked onchange="toggleSection('project-container')">Projects</label>
+    <label><input type="checkbox" checked onchange="toggleSection('skills-container')">Skills</label>
+    <label><input type="checkbox" checked onchange="toggleSection('certificates-container')">Certificates</label>
+    <label><input type="checkbox" checked onchange="toggleSection('achievements-container')">Achievements</label>
+    <label><input type="checkbox" checked onchange="toggleSection('languages-container')">Languages</label>
+    <label><input type="checkbox" checked onchange="toggleSection('additional-container')">Additional</label>
   </div>
 
   <footer class="footer">

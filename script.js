@@ -74,4 +74,23 @@ modeBtn.addEventListener('click',()=>{
   }
 })
 
+function toggleMenu() {
+  const panel = document.getElementById('menu-panel');
+  const overlay = document.getElementById('menu-overlay');
+  panel.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+function toggleSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const checkbox = document.querySelector(`#menu-panel input[onchange="toggleSection('${sectionId}')"]`);
+  
+  if (checkbox.checked) {
+    section.style.display = 'block'; // Show section
+  } else {
+    section.style.display = 'none'; // Hide section
+  }
+}
+
+
 
