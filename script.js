@@ -48,6 +48,8 @@ function applyDarkMode() {
   downloadBtn.style.color = 'black'
   modeBtn.innerText = '🌙';
   document.querySelector('.footer').style.color = 'white';
+  document.getElementById('menu-panel').style.background = '#333';
+  document.querySelector('#menu-panel h3').style.color = 'white'
 }
 
 function applyLightMode() {
@@ -61,6 +63,8 @@ function applyLightMode() {
   downloadBtn.style.color = 'white'
   modeBtn.innerText = '☀️';
   document.querySelector('.footer').style.color = 'black';
+  document.getElementById('menu-panel').style.background = 'white';
+  document.querySelector('#menu-panel h3').style.color = '#007bff'
 }
 
 modeBtn.addEventListener('click',()=>{
